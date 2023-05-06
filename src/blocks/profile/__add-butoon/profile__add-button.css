@@ -25,3 +25,11 @@
         margin-top: 27px;
     }
 }
+@media screen and (max-width: 320px) {
+    .profile__add-button {
+        width: 170px;
+        background-size: 16px;
+        /*margin: 0 auto;*/
+        margin-top: 27px;
+    }
+}
