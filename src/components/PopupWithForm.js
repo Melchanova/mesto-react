@@ -30,7 +30,6 @@ function PopupWithForm({
           name="popup"
           action="#"
           method="post"
-          noValidate
           onSubmit={onSubmit}
         >
           {children}
