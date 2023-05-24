@@ -17,13 +17,13 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  changeUserInfo({ name, position }) {
+  changeUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
         name: name,
-        about: position,
+        about: about,
       }),
     }).then(this._checkResponse);
   }
@@ -44,14 +44,11 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  addCard({ title, link }) {
+  addCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
-      body: JSON.stringify({
-        name: title,
-        link: link,
-      }),
+      body: JSON.stringify(data),
     }).then(this._checkResponse);
   }
 
